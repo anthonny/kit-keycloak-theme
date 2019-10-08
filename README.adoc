@@ -1,0 +1,26 @@
+= A simple kit to edit your Keycloak theme
+
+image::./keycloak-dev.gif[]
+
+== Usage
+
+You need docker and docker-compose.
+In your shell, run:
+
+```
+docker-compose up
+```
+
+It will start a Postgres database and a Keycloak container.
+A volume will be setup on the themes directory.
+
+Now you can build your theme in the directory
+```
+./themes/mytheme
+```
+
+NOTE: if you want to change the name `mytheme` by something else, you will have to edit the `docker-compose.yml` file too (`KEYCLOAK_WELCOME_THEME` and `KEYCLOAK_DEFAULT_THEME`).
+
+== License
+
+MIT
